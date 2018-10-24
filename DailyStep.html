@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <title>Daily Step</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="main.html">Fitness Tracker</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Account.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="LearnMore.html">Learn More</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="DailyHealthFact.html">Daily Health Fact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h3 class="display-4" align ="center">Todays Graph</h3>
+
+    <div class="container">
+      <div class="row-6">
+        <canvas id="line-chart"></canvas>
+      </div>
+    </div>
+    <br><br>
+    <div class="container">
+      <div class="row-6">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Duration</th>
+              <th scope="col">Step Count</th>
+              <th scope="col">Average Step Per Hour</th>
+              <th scope="col">Active Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Midnight 12-5</th>
+              <td>0</td>
+              <td>0</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <th scope="row">Dusk 5-8</th>
+              <td>0</td>
+              <td>0</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <th scope="row">Morning 8-11</th>
+              <td>2794</td>
+              <td>698.5</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <th scope="row">Noon 11-14</th>
+              <td>677</td>
+              <td>225.67</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <th scope="row">Afternoon 14-17</th>
+              <td>470.42</td>
+              <td>156.81</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <th scope="row">Evening 17-20</th>
+              <td>4,151.46</td>
+              <td>1,383.82</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <th scope="row">Night 20-24</th>
+              <td>582.12</td>
+              <td>194.04</td>
+              <td>Low</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <center><form action = "formatstep.html">
+      <input type = "submit" class = "btn btn-primary" value = "Return"/>
+    </form></center>
+    <br><br>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="/js/graphs.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

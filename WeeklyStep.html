@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <title>Weekly Step</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="main.html">Fitness Tracker</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Account.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="LearnMore.html">Learn More</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="DailyHealthFact.html">Daily Health Fact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h3 class="display-4" align ="center">This Weeks Graph</h3>
+
+    <div class="container">
+      <div class="row-6">
+        <canvas id="line-chart"></canvas>
+      </div>
+    </div>
+    <br><br>
+    <div class="container">
+      <div class="row-6">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Duration</th>
+              <th scope="col">Step Count</th>
+              <th scope="col">Valid Day</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Monday</th>
+              <td>9239</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <th scope="row">Tuesday</th>
+              <td>21448</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <th scope="row">Wednesday</th>
+              <td>9126</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <th scope="row">Thursday</th>
+              <td>10549</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <th scope="row">Friday</th>
+              <td>4249</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <th scope="row">Saturday</th>
+              <td>7766</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday</th>
+              <td>7442</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <center><form action = "formatstep.html">
+      <input type = "submit" class = "btn btn-primary" value = "Return"/>
+    </form></center>
+    <br><br>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="/js/graphs2.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
