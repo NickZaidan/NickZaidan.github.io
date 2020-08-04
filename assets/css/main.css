@@ -29,11 +29,19 @@ section, summary, time, mark, audio, video {
 }
 
 #project-class{
+	min-height: 1000px;
+	max-height: 1000px;
 	border-width: 2px;
 	padding: 15px;
 	border-color: #5d6193;
 	border-style: solid;
+
 }	
+
+#android-pic{
+	max-height: 100%;
+	max-width: 100%;
+}
 
 #project-heading{
 	padding-top: 5px;
