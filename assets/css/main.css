@@ -47,6 +47,12 @@ section, summary, time, mark, audio, video {
 	padding-top: 5px;
 }
 
+#gif-click {
+	position: relative;
+	display: inline-block;
+	margin-left: 5px;
+  }
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}

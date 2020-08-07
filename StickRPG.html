@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>StickRPG</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>StickRPG</h1>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+                                <div class="row gtr-uniform">			
+                                    <div class = "col-9">
+                                        <h2>Summary of Project</h2>
+                                
+                                        <p>StickRPG was my attempt at making a video game in Java without the use of an engine like Unity. 
+                                            Creating a game has been a dream of mine since before I learnt to code, and I was determined to make it a reality.
+                                        Furthermore, I think learning some of the basics behind game development is a crucial skillset for a programmer to develop,
+                                        as poor organisation of objects and functions can lead to a huge hinderance on performance during run-time. 
+                                        </p>
+                                        <p> I made this by following along with the YouTuber <a href = "https://www.youtube.com/playlist?list=PLah6faXAgguMnTBs3JnEJY0shAc18XYQZ"> <i>CodeNMore</i></a> tutorial on making a 2D game.
+                                            I also did not make any of the assets since learning graphical design was out of scope for this project.
+                                        </p>
+
+                                        <p>If you wish to play the game, download the codebase and run the Launcher class from a linux terminal via the command <code>java Launcher</code> and click Start.
+                                        To control the character, it is the default wasd keymap in order to move up, left, down and right respectively. To attack, use the arrow keys
+                                        to attack in the direction in which you desire. There is no animation for the attack, but can be seen working when an enemy Non Player Character (NPC) health depletes. 
+                                        Lastly, e is to open the inventory which at the current time only contains wood. There is no goal nor purpose, you can either
+                                        cut down the trees or attack npc's to get more wood. The wood does nothing at the current time.</p>
+                                        
+                                        <p>A list of some of the key  features I included in this game can be found below, with a gif demonstrating it in action. To view the gif, simply click to play and click again to stop.</p>
+                                        </br>
+
+                                    </div>
+                                </div>
+                                <!-- Not my JS code for click to play gifs: https://www.hongkiat.com/blog/on-click-animated-gif/ -->
+                                <div class="row gtr-uniform">			
+                                    <div class = "col-6">
+                                        <h3>Dynamic Camera</h3>
+                                        <p>The camera will always centre around the character, aside from when they are on edges. Additionally, all tiles
+                                            not  on screen are not being rendered in memory, which saves a great deal on rendering costs.
+                                        </p>
+                                    </div>
+                                    <div class = "col-6">
+                                        <span class="image fit">
+                                            <figure>
+                                                <img src="images/StickRPGCamera.png"  alt="Collision-Gif" data-alt="images/StickRPGCamera.gif">
+                                            </figure>
+                                        </span>
+                                    </div>    
+                                    
+                                </div>
+                                </br></br>
+                                <div class="row gtr-uniform">			
+                                    <div class = "col-6">
+                                        <h3>Entity Management</h3>
+                                        <p>Interactable objects in the game are all inherited from an Entity abstract class. When objects are removed, they are removed from the list of entities and deleted from memory.
+                                             This makes it easy to insert and remove entities, as well as expand more types of entities later on in development.
+                                        </p>
+                                    </div>
+                                    <div class = "col-6">            
+                                        <span class="image fit">
+                                            <figure>
+                                                <img src="images/StickRPGEntities.png"  alt="Collision-Gif" data-alt="images/StickRPGEntities.gif">
+                                            </figure>
+                                        </span>
+                                    </div>      
+                                </div>
+                            </br></br>
+                                <div class="row gtr-uniform">			
+                                    <div class = "col-8">
+                                        <h3>Collision</h3>
+                                        <p>Depending on the tile being rendered, it will either have collision detection or none. The grass tiles can be seen
+                                            having no collision since you can freely run between, whilst the stone walls block the player from running through. This applies to all entities as well, including enemy npc's and trees as players cannot run through them.
+                                        </p>
+                                    </div>
+                                    <div class = "col-4">            
+                                        <span class="image fit">
+                                            <figure>
+                                                <img src="images/StickRPGCollision.png"  alt="Collision-Gif" data-alt="images/StickRPGCollision.gif">
+                                            </figure>
+                                        </span>
+                                    </div>      
+                                </div>
+                            </br>
+                                <div class="row gtr-uniform">			
+                                    <div class = "col-9">
+                                        <h2>What I Learnt</h2>
+                                        <p>Besides lessons in actual game development, the most crucial lesson I learnt from this is the impact of memory management as projects begin to scale. For example, a class for an enemy object which runs a carelesss if-else chain can cause major impact on Frames Per Second (FPS). This is
+                                            due to every instance of said class also running this chain, which ends of totaling to a large amount of checks. To see this, if you had 
+                                            100 enemy objects on screen, with each enemy performing 10 checks. The worst case scenario for the amount of checks would be 1,000 per frame. 
+                                            Typically, games run upwards of 30 FPS, incidicating at minimum 30,000 checks per second. Clearly, this would have a huge impact on performance.</p>
+                                        <p>Additionally, I also had to learn some Java libraries to aid in rendering objects to screen. To do this, I used the <code>JFrame</code> and <code>Canvas</code> modules by using Canvas to render everything required, and the JFrame to act as the surrounding frame.</p>
+                                        <p>Lastly, I learnt the value of having a handler object which contains a reference to the key entities. This made things like collision detecting significantly easier by pulling data from the handler.
+                                            If this wasn't included, already convoluted lines such as </br> <code>for(Entity e: handler.getWorld().getEntityManager().getEntities()){}</code> would of been even more convoluted. 
+                                        </p>
+                                    </br>
+                                    </div>
+                                </div>
+
+                                <div class="row gtr-uniform">			
+                                    <div class = "col-9">
+                                
+                                <h2>Improvements and Reflections</h2>
+                                
+                                <p>Despite everything achieved through this project, there remains some features I wish I had added, or done differently.</p>
+                                
+                                <p>Firstly, the enemy AI's pathfinding is lacking. As of now, they currently move directly towards the players coordinates,
+                                    not caring about obstacles in their way. This makes the enemies easy to defeat since they get caught on anything that has 
+                                collision. To rectify this, I would implement the <a href = "https://en.wikipedia.org/wiki/A*_search_algorithm">A* algorithm</a> so that the enemy npc's would navigate around obstacles.</p>
+                                
+                                <p>The second improvement I would make would be to use packages for the classes. I underestimated how many different classes would be required
+                                    for game development, and grouping related classes through packages would make the files easier to navigate. As it is now, all classes are in the same directory
+                                    of the project.
+                                </p>
+                                <p>Another improvement I would of made would be to learn and develop an Event Manager for the game. Currently, nothing happens in game aside from enemy NPC's spawning which you can kill.
+                                    Introducing some quest based system through an Event Manager would make the game more interesting and dynamic to play. It would also allow me to develop some story to go along with it, rather than the minigame it currently is.
+
+                                </p>
+                                <p>The final change would be to make this in a Game Engine instead. Whilst I believe creating all these elements was beneficial for my learning, progress would of been much faster if I had used an engine.
+                                    Most of the time spent developing this was spent creating the necessary setup for the game to run properly, including aspects like a splitting a spritesheet, camera control and player control.
+                                    Using an engine such as Unity would of had many of these features already built, meaning actual development of the game would of progressed much further. Aside from learning purposes, creating these myself from scratch had no positive impact on the game itself.
+
+                                </p>
+								<ul class="actions small">
+                                    <li><a href="index.html#first" class="button primary small">Return To Projects</a></li>
+									<li><a href="https://github.com/NickZaidan/StickRPG" class="button small">View Code</a></li>
+								</ul>
+                            </div></div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+			<script src="assets/js/gifplayer-min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
