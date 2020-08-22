@@ -1789,6 +1789,7 @@ input, select, textarea {
 
 						.row.gtr-uniform > * {
 							padding-top: 1.25em;
+							width: 100%
 						}
 
 				.row.gtr-150 {
@@ -2603,17 +2604,13 @@ input, select, textarea {
 			}
 
 				ul.actions:not(.fixed) li {
-					-moz-flex-grow: 1;
-					-webkit-flex-grow: 1;
-					-ms-flex-grow: 1;
+					
 					flex-grow: 1;
-					-moz-flex-shrink: 1;
-					-webkit-flex-shrink: 1;
-					-ms-flex-shrink: 1;
 					flex-shrink: 1;
 					padding: 1em 0 0 0;
 					text-align: center;
-					width: 100%;
+					width: 70%;
+					margin: auto;
 				}
 
 					ul.actions:not(.fixed) li > * {
